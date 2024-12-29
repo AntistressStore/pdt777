@@ -3,5 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    // code directly in route only for test. In prod in separate controller
+    return view('houses');
 });
