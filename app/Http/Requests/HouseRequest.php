@@ -23,7 +23,8 @@ class HouseRequest extends FormRequest
     {
         return [
             'name' => 'string|nullable',
-            'price' => 'numeric|nullable',
+            'price_from' => 'numeric|nullable',
+            'price_to' => 'numeric|nullable',
             'bedrooms' => 'numeric|nullable',
             'bathrooms' => 'numeric|nullable',
             'storeys' => 'numeric|nullable',

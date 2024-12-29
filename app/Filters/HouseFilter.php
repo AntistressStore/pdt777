@@ -9,9 +9,14 @@ class HouseFilter extends QueryFilter
         $this->builder->where('name', 'LIKE', "%{$name}%");
     }
 
-    public function price(int $price): void
+    public function price_from(int $price): void
     {
-        $this->builder->whereBetween('price', $price);
+        $this->builder->where('price', '>=', $price);
+    }
+
+    public function price_to(int $price): void
+    {
+        $this->builder->where('price', '<=', $price);
     }
 
     public function bedrooms(int $count): void

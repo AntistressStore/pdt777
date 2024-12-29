@@ -1,3 +1,93 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.spinner {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	border: 10px solid;
+	border-color: rgba(55, 208, 255, 0.55) rgba(255, 255, 255, 0.25)
+		rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.5);
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+
+	@keyframes rotation {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+.label_div {
+	margin-top: 0.5em;
+	font-weight: 600;
+}
+
+.table_div {
+	margin-top: 2em;
+	width: fit-content;
+}
+
+.input_class {
+	/* width: 50%; */
+	color: rgb(36, 35, 42);
+	font-size: 16px;
+	line-height: 20px;
+	min-height: 28px;
+	border-radius: 4px;
+	padding: 8px 16px;
+	border: 2px solid transparent;
+	box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+	background: rgb(251, 251, 251);
+	transition: all 0.1s ease 0s;
+	:focus {
+		border: 2px solid rgb(124, 138, 255);
+	}
+}
+
+.main_margin {
+	margin: 2em;
+}
+
+.button_class {
+	display: inline-block;
+	outline: 0;
+	border: 0;
+	cursor: pointer;
+	will-change: box-shadow, transform;
+	background: radial-gradient(100% 100% at 100% 0%, #89e5ff 0%, #5468ff 100%);
+	box-shadow:
+		0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(
+			58 65 111 /
+			50%
+		);
+	padding: 0 32px;
+	border-radius: 6px;
+	color: #fff;
+	height: 48px;
+	font-size: 18px;
+	text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+	transition: box-shadow 0.15s ease, transform 0.15s ease;
+	:hover {
+		box-shadow:
+			0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+		transform: translateY(-2px);
+	}
+	:active {
+		box-shadow: inset 0px 3px 7px #3c4fe0;
+		transform: translateY(2px);
+	}
+	margin-top: 1em;
+}
+
+.house_row {
+	border-left: 0.5px solid black;
+	border-right: 0.5px solid black;
+	border-top: 0.5px solid black;
+	border-bottom: 0.5px solid black;
+	padding-left: 4px;
+	padding-right: 4px;
+	width: 200px;
+}
