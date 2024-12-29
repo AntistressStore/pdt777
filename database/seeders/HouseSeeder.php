@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Services\CSV\HouseCSVParser;
 use Illuminate\Database\Seeder;
 
 class HouseSeeder extends Seeder
@@ -12,6 +12,10 @@ class HouseSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $file = new \SplFileObject(storage_path().'/app/private/property-data.csv');
+
+        $parser = new HouseCSVParser($file);
+
+        $parser->seed();
     }
 }
